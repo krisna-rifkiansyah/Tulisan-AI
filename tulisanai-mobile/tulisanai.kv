@@ -1,0 +1,26 @@
+<TulisanAILayout>:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+    Image:
+        source: root.preview_source
+        size_hint_y: 0.5
+        allow_stretch: True
+        keep_ratio: True
+
+    Button:
+        text: "Pilih Gambar"
+        on_release: root.pick_image()
+
+    Button:
+        text: "Proses OCR"
+        on_release: root.process_ocr()
+    
+    
+
+    Label:
+        text: root.result_text
+        text_size: self.width, None
+        size_hint_y: None
+        height: self.texture_size[1]
